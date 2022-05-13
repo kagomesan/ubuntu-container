@@ -1,0 +1,10 @@
+docker build ./ -t alpine_image
+
+docker-compose up -d
+
+docker exec -it dns1 /bin/bash
+docker exec -it dns2 /bin/bash
+
+
+the spell of destruction
+docker-compose down --rmi all --volumes --remove-orphans

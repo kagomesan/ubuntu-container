@@ -1,0 +1,20 @@
+dns1:
+  image: ubuntu
+  container_name: dns1
+  hostname: dns1
+  volumes:
+    - "./dns1:/etc/bind"
+  ports:
+    - "1053:53"
+    - "1053:53/udp"
+  tty: true
+dns2:
+  image: ubuntu
+  container_name: dns2
+  hostname: dns2
+  volumes:
+    - "./dns2:/etc/bind"
+  ports:
+    - "1054:53"
+    - "1054:53/udp"
+  tty: true
