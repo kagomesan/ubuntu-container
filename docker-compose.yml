@@ -1,5 +1,5 @@
 dns1:
-  image: ubuntu
+  image: ubuntu_image
   container_name: dns1
   hostname: dns1
   volumes:
@@ -9,7 +9,7 @@ dns1:
     - "1053:53/udp"
   tty: true
 dns2:
-  image: ubuntu
+  image: ubuntu_image
   container_name: dns2
   hostname: dns2
   volumes:
